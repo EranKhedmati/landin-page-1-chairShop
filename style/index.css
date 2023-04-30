@@ -10,3 +10,90 @@ body {
     height: 100vh;
     font-family: 'League Spartan', sans-serif; 
 }
+/* Color Root */
+:root {
+    --light: #fff;
+    --black: #000;
+    --gray: #B3CBE1;
+}
+
+/* Global Class */
+.showen {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Navbar ------------------------------------------------- */
+
+nav.navbar {
+    width: 100%;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    position: absolute;
+    top: 0;
+    left: 0'
+}
+
+nav.navbar a {
+    text-decoration: none;
+    color: var(--light);
+}
+
+/* Brand */
+a.brand {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Nav link list */
+.navbar .nav-link-list {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    font-weight: 500;
+    z-index: 9;
+}
+
+/* Toggle menu */
+#menu-btn{
+    display: none;
+    font-size: 30px;
+    color: var(--light);
+    cursor: pointer;
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    z-index: 10;
+}
+
+/* Media query */
+@media (max-width: 900px) {
+    .navbar .nav-link-list {
+        display: none;
+        background: var(--light);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 60px 48px 48px 60px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .navbar .nav-link-list a {
+        color: var(--black);
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    #menu-btn{
+        display: block;
+    }
+}
